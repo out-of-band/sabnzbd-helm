@@ -23,7 +23,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: local.k8s.ignitionone.com
+    - host: local.k8s
       paths:
         - /sabnzbd
   tls: []
@@ -31,6 +31,14 @@ ingress:
 volumes:
   datadir: #DATADIR PATH#
   media: #MEDIA PATH#
+
+#TODO: Create server configuration, populate configmap with just this and let everything else default
+# servers:
+# - host: news.usenetserver.com
+#   username: user
+#   password: pass
+#   displayname: usenetserver
+#   port: 563
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
