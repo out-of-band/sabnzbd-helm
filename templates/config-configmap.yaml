@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config
+data:
+  config.ini: |-
+    {{- .Files.Get "config.ini" | indent 4 }}
